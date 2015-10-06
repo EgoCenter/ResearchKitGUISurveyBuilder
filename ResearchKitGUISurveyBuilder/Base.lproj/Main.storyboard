@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Question-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ORKStepBuilderViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WIx-C0-1XT">
+                                <rect key="frame" x="0.0" y="540" width="600" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="bTx-04-Bt5"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="6" minimumInteritemSpacing="6" id="Jq9-mq-5ey">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="6" minY="0.0" maxX="6" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCellID" id="QqB-1N-yZM">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K7q-EF-mOs">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lff-r2-9s2">
+                                        <rect key="frame" x="562" y="22" width="30" height="30"/>
+                                        <state key="normal" title="Test">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Lff-r2-9s2" secondAttribute="trailing" constant="8" id="27o-Y8-VoK"/>
+                                    <constraint firstAttribute="height" constant="60" id="WEt-cz-5iB"/>
+                                    <constraint firstAttribute="bottom" secondItem="Lff-r2-9s2" secondAttribute="bottom" constant="8" id="vRE-oS-O0h"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qc0-s9-odI">
+                                <rect key="frame" x="0.0" y="60" width="600" height="480"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tableViewCellID" textLabel="8pp-eZ-5qk" detailTextLabel="RQ3-FN-qJg" style="IBUITableViewCellStyleSubtitle" id="PP0-98-Ppf">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PP0-98-Ppf" id="esM-IC-bch">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8pp-eZ-5qk">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RQ3-FN-qJg">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WIx-C0-1XT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9uc-cj-lhB"/>
+                            <constraint firstAttribute="trailing" secondItem="K7q-EF-mOs" secondAttribute="trailing" id="APh-aQ-fXE"/>
+                            <constraint firstItem="K7q-EF-mOs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IWZ-7F-zpb"/>
+                            <constraint firstAttribute="trailing" secondItem="WIx-C0-1XT" secondAttribute="trailing" id="Qkq-i7-V0V"/>
+                            <constraint firstItem="WIx-C0-1XT" firstAttribute="top" secondItem="qc0-s9-odI" secondAttribute="bottom" id="Swa-tM-wHP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WIx-C0-1XT" secondAttribute="bottom" id="VRY-od-a84"/>
+                            <constraint firstAttribute="trailing" secondItem="qc0-s9-odI" secondAttribute="trailing" id="fqh-iU-q5R"/>
+                            <constraint firstItem="K7q-EF-mOs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="l5V-cN-yTu"/>
+                            <constraint firstItem="qc0-s9-odI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ruC-gF-IKd"/>
+                            <constraint firstItem="qc0-s9-odI" firstAttribute="top" secondItem="K7q-EF-mOs" secondAttribute="bottom" id="ue2-eg-rbh"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Question" id="A5T-8O-yW0"/>
+                    <connections>
+                        <outlet property="collectionView" destination="WIx-C0-1XT" id="s8a-ko-0IY"/>
+                        <outlet property="tableView" destination="qc0-s9-odI" id="otZ-dv-XT5"/>
+                        <outlet property="testSurveyButton" destination="Lff-r2-9s2" id="Sai-qO-G9d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3054" y="318"/>
+        </scene>
+    </scenes>
+</document>
