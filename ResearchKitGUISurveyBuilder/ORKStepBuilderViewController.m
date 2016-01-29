@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 Mission Minds. All rights reserved.
 //
 
+@import Foundation;
+
 #import "ORKStepBuilderViewController.h"
 #import <ResearchKit/ResearchKit.h>
 #import <objc/runtime.h>
@@ -143,9 +145,9 @@ static NSString *tableViewCellID = @"tableViewCellID";
 	
 	// TODO: handle form step after question step functionality is complete. TB.
 	
-	NSString *stepID = @"DefaultStepID";
-	NSString *formStepID = @"DefaultFormStepID";
-	NSString *formItemID = @"DefaultFormItemID";
+    NSString *stepID = [[NSUUID UUID] UUIDString];   //@"DefaultStepID";
+	NSString *formStepID = [[NSUUID UUID] UUIDString];   //@"DefaultFormStepID";
+	NSString *formItemID = [[NSUUID UUID] UUIDString];   //@"DefaultFormItemID";
 	
 //	ORKFormItem *formItem = [[ORKFormItem alloc] initWithIdentifier:formItemID text:@"Form Item Text" answerFormat:[self answerFormatForIndex:indexPath]];
 //	ORKFormStep *step = [[ORKFormStep alloc] initWithIdentifier:formStepID title:@"Form Step Title" text:@"Form Step Text" ];
@@ -193,18 +195,22 @@ static NSString *tableViewCellID = @"tableViewCellID";
 	
 	switch (indexPath.row) {
 		case 0:
-			return [ORKAnswerFormat scaleAnswerFormatWithMaximumValue:scaleMaximum
+ 			return [ORKAnswerFormat scaleAnswerFormatWithMaximumValue:scaleMaximum
 														 minimumValue:scaleMinimum
 														 defaultValue:defaultValue
 																 step:step
-															 vertical:vertical];
+															 vertical:vertical
+                                                        maximumValueDescription:@"max"
+                                                        minimumValueDescription:@"min"];
 			
 		case 1:
 			return [ORKAnswerFormat continuousScaleAnswerFormatWithMaximumValue:(double)scaleMaximum
 																   minimumValue:(double)scaleMinimum
 																   defaultValue:(double)defaultValue
-														  maximumFractionDigits:maximumFractionDigits
-																	   vertical:vertical];
+                                                                   maximumFractionDigits:maximumFractionDigits
+																	   vertical:vertical
+                                                            maximumValueDescription:@"max"
+                                                            minimumValueDescription:@"min"];
 			
 		case 2:
 			return [ORKAnswerFormat booleanAnswerFormat];
